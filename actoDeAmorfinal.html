@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acto de Amor Arreglos Funerales - Planes de arreglos funerarios</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f8f8;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            padding: 1.5rem 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: #e8f4f8;
+            letter-spacing: 1px;
+        }
+
+        .contact-info {
+            text-align: right;
+            font-size: 1.1rem;
+        }
+
+        .contact-info div {
+            margin-bottom: 0.3rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(52, 73, 94, 0.85)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23e8f4f8" width="1200" height="600"/><circle fill="%23bdc3c7" cx="300" cy="150" r="50"/><circle fill="%2395a5a6" cx="900" cy="400" r="30"/></svg>');
+            background-size: cover;
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            font-weight: 300;
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #e67e22, #d35400);
+            color: white;
+            padding: 18px 35px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 25px rgba(230, 126, 34, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .cta-button:hover {
+            background: linear-gradient(135deg, #d35400, #c0392b);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(230, 126, 34, 0.4);
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 5rem 0;
+        }
+
+        .section {
+            margin-bottom: 5rem;
+            background: white;
+            padding: 3.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            border-top: 4px solid #e67e22;
+        }
+
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(135deg, #e67e22, #d35400);
+            border-radius: 2px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .benefit-card {
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            padding: 2.5rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid #e9ecef;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, #e67e22, #d35400);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        }
+
+        .benefit-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .benefit-card h3 {
+            color: #2c3e50;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        /* Info Box Styling */
+        .info-box {
+            background: linear-gradient(135deg, #34495e, #2c3e50);
+            color: white;
+            padding: 3rem;
+            border-radius: 15px;
+            margin: 3rem 0;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(52, 73, 94, 0.3);
+        }
+
+        .info-box h3 {
+            color: #f39c12;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        .info-box p {
+            font-size: 1.3rem;
+            line-height: 1.7;
+            opacity: 0.95;
+        }
+
+        /* Plans Section */
+        .plans-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .plan-card {
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            position: relative;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .plan-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(135deg, #e67e22, #d35400);
+        }
+
+        .plan-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(230, 126, 34, 0.15);
+            border-color: #e67e22;
+        }
+
+        .plan-popular {
+            background: linear-gradient(135deg, #e67e22, #d35400);
+            color: white;
+            border: none;
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(230, 126, 34, 0.25);
+        }
+
+        .plan-popular::after {
+            content: "MÁS ELEGIDO";
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #c0392b;
+            color: white;
+            padding: 8px 25px;
+            border-radius: 25px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .plan-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+            font-weight: 300;
+        }
+
+        .plan-popular .plan-title {
+            color: white;
+        }
+
+        .plan-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            display: block;
+            color: #e67e22;
+        }
+
+        .plan-popular .plan-icon {
+            color: white;
+        }
+
+        .plan-features {
+            list-style: none;
+            margin: 2rem 0;
+            text-align: left;
+        }
+
+        .plan-features li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #f8f9fa;
+            font-size: 1.1rem;
+        }
+
+        .plan-popular .plan-features li {
+            border-bottom-color: rgba(255,255,255,0.3);
+        }
+
+        /* Partnership Section */
+        .partnership {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            text-align: center;
+            padding: 3.5rem;
+            border-radius: 20px;
+            margin: 4rem 0;
+            box-shadow: 0 10px 30px rgba(52, 152, 219, 0.3);
+        }
+
+        .partnership h3 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        .partnership p {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .service-item {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            border-radius: 15px;
+            border: 1px solid #e9ecef;
+            transition: all 0.3s ease;
+        }
+
+        .service-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: #e67e22;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-item h4 {
+            color: #2c3e50;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            text-align: center;
+            padding: 5rem 0;
+            margin-top: 5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+            margin-top: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-phone {
+            padding: 2rem;
+        }
+
+        .phone-button {
+            display: block;
+            background: linear-gradient(135deg, #27ae60, #1e8449);
+            color: white;
+            padding: 25px;
+            text-decoration: none;
+            border-radius: 15px;
+            font-size: 1.6rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(39, 174, 96, 0.3);
+        }
+
+        .phone-button:hover {
+            background: linear-gradient(135deg, #1e8449, #196f3d);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(39, 174, 96, 0.4);
+        }
+
+        .form-container {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            color: #333;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+
+        .form-container h3 {
+            color: #2c3e50;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            font-weight: 300;
+        }
+
+        .form-container p {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 1.1rem;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            background: #f8f9fa;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #e67e22;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.1);
+        }
+
+        .submit-button {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            padding: 18px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .submit-button:hover {
+            background: linear-gradient(135deg, #1a252f, #2c3e50);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(44, 62, 80, 0.3);
+        }
+
+        .consultation-benefits {
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .benefits-box {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            display: inline-block;
+            max-width: 600px;
+            box-shadow: 0 10px 30px rgba(52, 152, 219, 0.3);
+        }
+
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            font-size: 1.1rem;
+        }
+
+        .benefits-list li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .benefits-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #f39c12;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Success Message */
+        .success-message {
+            display: none;
+            background: linear-gradient(135deg, #27ae60, #1e8449);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 2rem;
+            box-shadow: 0 10px 30px rgba(39, 174, 96, 0.3);
+        }
+
+        .success-message.show {
+            display: block;
+            animation: slideInUp 0.5s ease-out;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a252f;
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        footer p {
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .footer-links {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #34495e;
+        }
+
+        .footer-links a {
+            color: #e67e22;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        .footer-links a:hover {
+            color: #f39c12;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .header-content {
+                text-align: center;
+            }
+            
+            .contact-info {
+                text-align: center;
+                margin-top: 1rem;
+            }
+            
+            .section {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .plan-popular {
+                transform: none;
+            }
+
+            .logo {
+                font-size: 1.8rem;
+            }
+
+            .contact-info {
+                font-size: 1rem;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* Loading state for form */
+        .loading {
+            opacity: 0.7;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Acto de Amor</div>
+                <div class="contact-info">
+                    <div>📞 +1 (956) 266-0087</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Proteja a Su Familia Hoy</h1>
+            <p>No deje que sus seres queridos enfrenten la carga financiera de un funeral. Nuestros Planes de arreglos funerarios brindan tranquilidad y seguridad para usted y su familia.</p>
+            <a href="#cita" class="cta-button">Agendar Consulta Gratuita</a>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="section">
+                <h2>¿Por Qué Elegir un Plan de arreglos funerarios?</h2>
+                <div class="info-box">
+                    <h3>Una Decisión Inteligente Para Su Familia</h3>
+                    <p>
+                        Los costos funerarios pueden alcanzar entre $15,000 y $25,000. Con un Plan de arreglos funerarios, 
+                        usted congela el precio de hoy y protege a su familia de aumentos futuros y estrés financiero.
+                    </p>
+                </div>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <span class="benefit-icon">🛡️</span>
+                        <h3>Protección Garantizada</h3>
+                        <p>Su cobertura comienza desde el primer pago, sin exámenes médicos ni rechazos por edad o condición de salud.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <span class="benefit-icon">🔒</span>
+                        <h3>Precio Fijo</h3>
+                        <p>El precio que pague hoy permanece fijo para siempre. Protéjase contra la inflación y los aumentos futuros de costos.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <span class="benefit-icon">💖</span>
+                        <h3>Tranquilidad Familiar</h3>
+                        <p>Sus seres queridos no tendrán que preocuparse por los costos durante un momento difícil. Todo estará cubierto.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <span class="benefit-icon">⚖️</span>
+                        <h3>Flexibilidad de Pagos</h3>
+                        <p>Elija el plan de pagos que mejor se adapte a su presupuesto, con opciones flexibles de financiamiento.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="info-box">
+                <h3>Reflexione Sobre Esto</h3>
+                <p><strong>"Si algo me pasara mañana, ¿mi familia tendría los recursos necesarios para cubrir los gastos funerarios?"</strong></p>
+                <p style="margin-top: 1rem; color: #f39c12;"><strong>Si la respuesta genera dudas, es momento de considerar un Plan de arreglos funerarios.</strong></p>
+            </div>
+
+            <section class="section" id="planes">
+                <h2>Nuestros Servicios Disponibles</h2>
+                <p style="text-align: center; font-size: 1.2rem; color: #666; margin-bottom: 2rem;">
+                    Elija el servicio que mejor honre la memoria de su ser querido
+                </p>
+                <div class="plans-container">
+                    <div class="plan-card">
+                        <h3 class="plan-title">Cremaciónes</h3>
+                        <ul class="plan-features">
+                            <li> Ofrecemos desde cremaciones directas hasta servicios tradicionales de cremación.</li>
+
+                        </ul>
+                        <a href="#cita" class="cta-button">Consultar Este Servicio</a>
+                    </div>
+                    
+                    <div class="plan-card plan-popular">
+                        <h3 class="plan-title">Entierro Tradicional</h3>
+                        <ul class="plan-features">
+                            <li>Ofrecemos servicios funerarios tradicionales con todo lo necesario para honrar a su ser querido.</li>
+
+
+                        </ul>
+                        <a href="#cita" class="cta-button">Consultar Este Servicio</a>
+                    </div>
+                    
+                    <div class="plan-card">
+                        <h3 class="plan-title">Traslado a México</h3>
+                        <ul class="plan-features">
+                            <li>Brindamos apoyo integral en la preparación del cuerpo y la tramitación de documentos para el traslado de su ser querido a México.</li>
+                           
+                        </ul>
+                        <a href="#cita" class="cta-button">Consultar Este Servicio</a>
+                    </div>
+                </div>
+            </section>
+
+            <div class="partnership">
+                <h3>🤝 Respaldados por National Guardian Life</h3>
+                <p>
+                    Contamos con el respaldo de National Guardian Life, una aseguradora con mas de 115 años de experiencia cuidando de las familias. Esta alianza nos permite ofrecerle tranquilidad con planes sólidos y confiables.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <section class="contact-section" id="cita">
+        <div class="container">
+            <h2 style="color: white; margin-bottom: 1rem;">Consulta Personalizada Gratuita</h2>
+            <p style="font-size: 1.2rem; color: #bdc3c7; max-width: 600px; margin: 0 auto 2rem;">
+                Nuestros asesores especializados están listos para ayudarle a encontrar el servicio perfecto para su familia.
+            </p>
+            
+            <div class="contact-grid">
+                <div class="contact-phone">
+                    <h3 style="color: #e67e22; font-size: 1.8rem; margin-bottom: 1.5rem;">Llame Ahora</h3>
+                    <a href="tel:+19562660087" class="phone-button">
+                        📱 +1 (956) 266-0087
+                    </a>
+                    <p style="color: #bdc3c7; text-align: center; font-size: 1.1rem;">Horario: Lunes-Sábado 8AM-8PM</p>
+                </div>
+                
+                <div class="form-container">
+                    <h3>Reserve Su Consulta</h3>
+                    <p>Complete este formulario y nos pondremos en contacto con usted</p>
+                    
+                    <form id="appointmentForm">
+                        <div class="form-group">
+                            <label>Nombre Completo *</label>
+                            <input type="text" id="name" required placeholder="Su nombre completo">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Teléfono *</label>
+                            <input type="tel" id="phone" required placeholder="(956) 123-4567">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Dirección (Opcional)</label>
+                            <input type="text" id="address" placeholder="Su dirección">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Servicio de Interés</label>
+                            <select id="plan">
+                                <option value="">Seleccione un servicio</option>
+                                <option value="cremacion">Cremación</option>
+                                <option value="entierro">Entierro Tradicional</option>
+                                <option value="traslado-mexico">Traslado a México</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="submit-button">Solicitar Consulta Gratuita</button>
+                    </form>
+                    
+                    <div class="success-message" id="successMessage">
+                        <h3>¡Gracias por contactarnos!</h3>
+                        <p>Un asesor se pondrá en contacto con usted pronto para programar su consulta gratuita.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="consultation-benefits">
+                <div class="benefits-box">
+                    <h3>Beneficios de Nuestra Consulta</h3>
+                    <ul class="benefits-list">
+                        <li>Evaluación personalizada de sus necesidades</li>
+                        <li>Información detallada sobre nuestros servicios</li>
+                        <li>Opciones de financiamiento flexibles</li>
+                        <li>Sin compromiso ni presión</li>
+                        <li>Asesoramiento experto y compasivo</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Acto de Amor Arreglos Funerales. Todos los derechos reservados.</p>
+            <p>Servicios disponibles en todo el Valle del Río Grande</p>
+            <div class="footer-links">
+                <a href="#planes">Nuestros Servicios</a>
+                <a href="#cita">Contacto</a>
+                <a href="tel:+19562660087">Llamar Ahora</a>
+            </div>
+            <p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.7;">
+                Licencia #12345 | Asegurado por National Guardian Life
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('appointmentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const form = this;
+            const successMessage = document.getElementById('successMessage');
+            
+            // Add loading state
+            form.classList.add('loading');
+            
+            // Collect form data
+            const formData = {
+                name: document.getElementById('name').value,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value,
+                service: document.getElementById('plan').value,
+                message: document.getElementById('address').value,
+                timestamp: new Date().toISOString(),
+                recipient: 'vcastorena24@yahoo.com'
+            };
+
+            // Send to email service
+            fetch('https://api.emailjs.com/api/v1.0/email/send', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    service_id: 'YOUR_SERVICE_ID', // You'll need to set this up in EmailJS
+                    template_id: 'YOUR_TEMPLATE_ID', // You'll need to set this up in EmailJS
+                    user_id: 'YOUR_USER_ID', // You'll need to set this up in EmailJS
+                    template_params: formData
+                })
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Show success message
+                    form.style.display = 'none';
+                    successMessage.classList.add('show');
+                    form.reset();
+
+                    // Track in HubSpot
+                    if (typeof hbspt !== 'undefined') {
+                        hbspt.forms.create({
+                            region: "na1",
+                            portalId: "YOUR_PORTAL_ID", // You'll need to add your HubSpot portal ID
+                            formId: "YOUR_FORM_ID" // You'll need to add your HubSpot form ID
+                        });
+                    }
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Lo sentimos, hubo un error al enviar su solicitud. Por favor, intente llamarnos directamente.');
+                form.classList.remove('loading');
+            });
+        });
+
+        // Add smooth scrolling for better navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add font size controls for accessibility
+        const style = document.createElement('style');
+        style.textContent = `
+            .font-size-controls {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                background: white;
+                padding: 10px;
+                border-radius: 5px;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                z-index: 1000;
+            }
+            .font-size-controls button {
+                background: #2c3e50;
+                color: white;
+                border: none;
+                padding: 5px 10px;
+                margin: 0 5px;
+                border-radius: 3px;
+                cursor: pointer;
+            }
+            .font-size-controls button:hover {
+                background: #34495e;
+            }
+        `;
+        document.head.appendChild(style);
+
+        const controls = document.createElement('div');
+        controls.className = 'font-size-controls';
+        controls.innerHTML = `
+            <button onclick="changeFontSize(-1)">A-</button>
+            <button onclick="changeFontSize(1)">A+</button>
+        `;
+        document.body.appendChild(controls);
+
+        function changeFontSize(delta) {
+            const body = document.body;
+            const currentSize = parseFloat(window.getComputedStyle(body).fontSize);
+            body.style.fontSize = (currentSize + delta) + 'px';
+        }
+    </script>
+
+    <!-- HubSpot Tracking Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/YOUR_PORTAL_ID.js"></script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR-GA-ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'YOUR-GA-ID');
+    </script>
+</body>
+</html>
